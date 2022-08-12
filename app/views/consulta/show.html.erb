@@ -1,10 +1,34 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<%= render @consultum %>
+<p>
+  <strong>Data:</strong>
+  <%= @consultum.date %>
+</p>
 
-<div>
-  <%= link_to "Edit this consultum", edit_consultum_path(@consultum) %> |
-  <%= link_to "Back to consulta", consulta_path %>
+<p>
+  <strong>Time:</strong>
+  <%= @consultum.time %>
+</p>
 
-  <%= button_to "Destroy this consultum", @consultum, method: :delete %>
-</div>
+<p>
+  <strong>Medico:</strong>
+  <%= Medico.find(@consultum.medico_id).name %>
+</p>
+
+<p>
+  <strong>CRM:</strong>
+  <%= Medico.find(@consultum.medico_id).crm %>
+</p>
+
+<p>
+  <strong>Especialidade:</strong>
+  <%= Medico.find(@consultum.medico_id).speciality %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= Paciente.find(@consultum.paciente_id).name %>
+</p>
+
+<%= link_to 'Edit', edit_consultum_path(@consultum) %> |
+<%= link_to 'Back', consulta_path %>
