@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Medicos</h1>
+<h1 class=""> Medicos</h1>
 
 <div id="medicos">
-  <% @medicos.each do |medico| %>
+    <% @medicos.each do |medico| %>
     <%= render medico %>
     <p>
       <%= link_to "Show this medico", medico %>

@@ -8,7 +8,7 @@ class Consultum < ApplicationRecord
 
   def invalid_time
     if %w[07:00 08:00 09:00 10:00 11:00 12:00 14:00 15:00 16:00 17:00 18:00 19:00].exclude? time
-      errors.add(:time, "O horário escolhido é fora do horário comercial!")
+      errors.add(:time, "O horário escolhido é fora do horário comercial(De 7h da manhã as 19h da noite!")
     end
   end
 
