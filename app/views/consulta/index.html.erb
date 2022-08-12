@@ -4,10 +4,25 @@
 
 <div id="consulta">
   <% @consulta.each do |consultum| %>
-    <%= render consultum %>
-    <p>
+    <tr>
+      <p>
+      <strong>Date:</strong>
+      <%= consultum.date %>
+      </p>
+      <p>
+        <strong>Time:</strong>
+        <%= consultum.time %>
+      </p>
+      <p>
+        <strong>Médico:</strong>
+        <%= consultum.medico.name %>
+      </p>
+      <p>
+        <strong>Paciente:</strong>
+        <%= consultum.paciente.name %>
+      </p>
       <%= link_to "Show this consultum", consultum %>
-    </p>
+    </tr>
   <% end %>
 </div>
 
