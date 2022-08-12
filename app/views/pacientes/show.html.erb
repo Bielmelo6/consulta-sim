@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @paciente.name %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @paciente.birthday %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @paciente.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @paciente.email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @paciente.endereco.city %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @paciente.endereco.neighborhood %>
+</p>
+
+<p>
+  <strong>Street/Avenue:</strong>
+  <%= @paciente.endereco.street_avenue %>
+</p>
+
+<p>
+  <strong>Complement:</strong>
+  <%= @paciente.endereco.complement %>
+</p>
+
+<p>
+  <strong>CEP:</strong>
+  <%= @paciente.endereco.cep %>
+</p>
+
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>

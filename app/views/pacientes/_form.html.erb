@@ -1,0 +1,65 @@
+<%= form_with(model: paciente) do |form| %>
+  <% if paciente.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+        <% paciente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :birthday, style: "display: block" %>
+    <%= form.date_field :birthday %>
+  </div>
+
+  <div>
+    <%= form.label :cpf, style: "display: block" %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <%= form.fields_for :endereco do |endereco_form| %>
+
+    <div class="field">
+      <%= endereco_form.label :city %>
+      <%= endereco_form.text_field :city %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :neighborhood %>
+      <%= endereco_form.text_field :neighborhood %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :street_avenue %>
+      <%= endereco_form.text_field :street_avenue %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :complement %>
+      <%= endereco_form.text_field :complement %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :cep %>
+      <%= endereco_form.text_field :cep %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
