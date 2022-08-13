@@ -1,8 +1,8 @@
 class Paciente < ApplicationRecord
   has_many :consultums
   has_many :medicos, through: :consultums
-  has_one :endereco, dependent: :destroy
-  accepts_nested_attributes_for :endereco, allow_destroy: true
+  has_one :endereco
+  accepts_nested_attributes_for :endereco
 
 
   validates :name, presence:true, length: {in: 2..50}
