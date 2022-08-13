@@ -1,5 +1,6 @@
 class Paciente < ApplicationRecord
-  has_many :consultums
+  has_many :consultums, dependent: :destroy
+  accepts_nested_attributes_for :consultums, allow_destroy: true
   has_many :medicos, through: :consultums
   has_one :endereco, dependent: :destroy
   accepts_nested_attributes_for :endereco, allow_destroy: true

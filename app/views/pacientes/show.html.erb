@@ -47,3 +47,5 @@
 
 <%= link_to 'Edit', edit_paciente_path(@paciente) %> |
 <%= link_to 'Back', pacientes_path %>
+<%= button_to "Destroy this paciente", @paciente, method: :delete %>
+<%= button_to "Destroy this endereço", @endereco, method: :delete %>

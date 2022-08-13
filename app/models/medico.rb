@@ -1,7 +1,9 @@
 class Medico < ApplicationRecord
 
-  has_many :consultums
+  has_many :consultums, dependent: :destroy
+  accepts_nested_attributes_for :consultums, allow_destroy: true
   has_many :pacientes, through: :consultums
+
 
   validates_format_of :crm, with: /\A\w{3}\W{1}\w{2}\s\d{6}\z/, presence: true,
                       message: 'Deve conter o seguinte formato: CRM/PE XXXXXX'
