@@ -11,55 +11,55 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :name, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :birthday, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :birthday, style: "display: block; margin:0 5px 0 0" %>
     <%= form.date_field :birthday %>
   </div>
 
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :cpf, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :cpf %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :email, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :email %>
   </div>
 
   <%= form.fields_for :endereco do |endereco_form| %>
 
-    <div class="field">
-      <%= endereco_form.label :city %>
+    <div class="field" style="display: flex; justify-content: center; padding: 5px">
+      <%= endereco_form.label :city, style: "display: block; margin:0 5px 0 0" %>
       <%= endereco_form.text_field :city %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :neighborhood %>
+    <div class="field" style="display: flex; justify-content: center; padding: 5px">
+      <%= endereco_form.label :neighborhood, style: "display: block; margin:0 5px 0 0" %>
       <%= endereco_form.text_field :neighborhood %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :street_avenue %>
+    <div class="field" style="display: flex; justify-content: center; padding: 5px">
+      <%= endereco_form.label :street_avenue, style: "display: block; margin:0 5px 0 0" %>
       <%= endereco_form.text_field :street_avenue %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :complement %>
+    <div class="field" style="display: flex; justify-content: center; padding: 5px">
+      <%= endereco_form.label :complement, style: "display: block; margin:0 5px 0 0" %>
       <%= endereco_form.text_field :complement %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :cep %>
+    <div class="field" style="display: flex; justify-content: center; padding: 5px">
+      <%= endereco_form.label :cep, style: "display: block; margin:0 5px 0 0" %>
       <%= endereco_form.text_field :cep %>
     </div>
   <% end %>
 
-  <div>
+  <div style="display: flex; justify-content: center">
     <%= form.submit %>
   </div>
 <% end %>

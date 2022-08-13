@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :date, style: "display: block; margin:0 5px 0 0" %>
     <%= form.date_field :date %>
   </div>
 
-  <div class="field">
-    <%= form.label :time %>
+  <div class="field" style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :time, style: "display: block; margin:0 5px 0 0" %>
     <%= form.select(:time, %w[00:00 01:00 02:00 03:00 04:00 05:00 06:00 07:00 08:00 09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00 20:00 21:00 22:00 23:00])%>
   </div>
 
-  <div class="field">
-    <%= form.label :medico_id %>
+  <div class="field" style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :medico_id, style: "display: block; margin:0 5px 0 0" %>
     <%= form.collection_select(:medico_id, Medico.all, :id, :name,{:selected => @consultum.medico_id})%>
   </div>
 
-  <div class="field">
-    <%= form.label :paciente_id %>
+  <div class="field" style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :paciente_id, style: "display: block; margin:0 5px 0 0" %>
     <%= form.collection_select(:paciente_id, Paciente.all, :id, :name,{:selected => @consultum.paciente_id})%>
   </div>
 
-  <div>
+  <div style="display: flex; justify-content: center">
     <%= form.submit %>
   </div>
 <% end %>

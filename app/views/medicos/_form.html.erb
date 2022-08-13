@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :name, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :birthday, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :birthday, style: "display: block; margin:0 5px 0 0" %>
     <%= form.date_field :birthday %>
   </div>
 
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :cpf, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :cpf %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :email, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :email %>
   </div>
 
-  <div>
-    <%= form.label :crm, style: "display: block" %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :crm, style: "display: block; margin:0 5px 0 0" %>
     <%= form.text_field :crm %>
   </div>
 
-  <div>
-    <%= form.label :speciality, style: "display: block" %>
-    <%= form.text_field :speciality %>
+  <div style="display: flex; justify-content: center; padding: 5px">
+    <%= form.label :speciality, style: "display: block; margin:0 5px 0 0" %>
+    <%= form.select(:speciality, %w[Cardiologista Neurologista Ortopedista Ginecologista Urologista Proctologista Dermatologista Oftamologista Oncologista Pediatra Fisiologista Mastologista Geriatra Obstetra])%>
   </div>
 
-  <div>
+  <div style="display: flex; justify-content: center; padding: 5px">
     <%= form.submit %>
   </div>
 <% end %>
