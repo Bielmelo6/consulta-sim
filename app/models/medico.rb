@@ -6,7 +6,7 @@ class Medico < ApplicationRecord
 
 
   validates_format_of :crm, with: /\A\w{3}\W{1}\w{2}\s\d{6}\z/, presence: true,
-                      message: 'Deve conter o seguinte formato: CRM/PE XXXXXX'
+                      message: 'Deve conter o seguinte formato: CRM/(Sigla do estado) XXXXXX'
   validates_format_of :cpf, with: /\A\d{9}-\d{2}\z/, presence: true,
                       message: 'Deve conter o seguinte formato: XXXXXXXXX-XX'
   validates :name, presence: true, length: {in: 2..50}
